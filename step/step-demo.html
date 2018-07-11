@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>step - 步骤条演示</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="layui/mods/extend/step/step.css" />
+	</head>
+	<body>
+		<div id="demo0"></div>
+		<div id="demo1"></div>
+		<div id="demo2"></div>
+		<div id="demo3"></div>
+		<div id="demo4"></div>
+		<div id="demo5"></div>
+	<script type="text/javascript" src="layui/layui.js" ></script>
+	<script type="text/javascript">
+		layui.config({
+	        base: 'layui/mods/extend/step/'
+	    }).use('step',function(){
+			var step = layui.step
+			
+			,data0 = {
+				steps: [{"title" : "提交初审", "time" : "2018-07-22"},
+					   {"title" : "初审完成", "time" : "2018-07-22"},
+					   {"title" : "提交复审", "time" : "2018-07-22"},
+					   {"title" : "复审完成", "time" : "2018-07-22"},
+					   {"title" : "处理完成", "time" : "2018-07-22"}]
+				,current: 0
+			}
+			data1 = {
+				steps: [{"title" : "提交初审", "time" : "2018-07-22"},
+					   {"title" : "初审完成", "time" : "2018-07-22"},
+					   {"title" : "提交复审", "time" : "2018-07-22"},
+					   {"title" : "复审完成", "time" : "2018-07-22"},
+					   {"title" : "处理完成", "time" : "2018-07-22"}]
+				,current: 1
+			}
+			data2 = {
+				steps: [{"title" : "提交初审", "time" : "2018-07-22"},
+					   {"title" : "初审完成", "time" : "2018-07-22"},
+					   {"title" : "提交复审", "time" : "2018-07-22"},
+					   {"title" : "复审完成", "time" : "2018-07-22"},
+					   {"title" : "处理完成", "time" : "2018-07-22"}]
+				,current: 2	
+			}
+			data3 = {
+				steps: [{"title" : "提交初审", "time" : "2018-07-22"},
+					   {"title" : "初审完成", "time" : "2018-07-22"},
+					   {"title" : "提交复审", "time" : "2018-07-22"},
+					   {"title" : "复审完成", "time" : "2018-07-22"},
+					   {"title" : "处理完成", "time" : "2018-07-22"}]
+				,current: 3	
+			}
+			data4 = {
+				steps: [{"title" : "提交初审", "time" : "2018-07-22"},
+					   {"title" : "初审完成", "time" : "2018-07-22"},
+					   {"title" : "提交复审", "time" : "2018-07-22"},
+					   {"title" : "复审完成", "time" : "2018-07-22"},
+					   {"title" : "处理完成", "time" : "2018-07-22"}]
+				,current: 4	
+			}
+			data5 = {
+				steps: [{"title" : "提交初审", "time" : "2018-07-22"},
+					   {"title" : "初审完成", "time" : "2018-07-22"},
+					   {"title" : "提交复审", "time" : "2018-07-22"},
+					   {"title" : "复审完成", "time" : "2018-07-22"},
+					   {"title" : "处理完成", "time" : "2018-07-22"}]
+				,current: 5	
+			}
+			
+			step.ready({
+				elem: '#demo0',
+				data: data0,
+				width: '150px',
+				color: {
+					success:'green',
+					error:'red'
+				}
+			})
+			
+			step.ready({
+				elem: '#demo1',
+				data: data1,
+				width: '150px',
+				color: {
+					success:'green',
+					error:'red'
+				}
+			})
+			
+			step.ready({
+				elem: '#demo2',
+				data: data2,
+				width: '150px',
+				color: {
+					success:'#56ece3',
+					error:'red'
+				}
+			})
+			step.ready({
+				elem: '#demo3',
+				data: data3,
+				width: '150px',
+				color: {
+					error:'#848484'
+				}
+			})
+			step.ready({
+				elem: '#demo4',
+				data: data4,
+				width: '150px',
+				color: {
+					error:'#848484'
+				}
+			})
+			step.ready({
+				elem: '#demo5',
+				data: data5,
+				width: '150px'
+			})
+		})
+	</script>
+	</body>
+</html>
